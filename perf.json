@@ -1,61 +1,39 @@
 {
-  "performance_analysis": {
-    "title": "Performance Analysis of Sorting Algorithms",
-    "data": [
+  "type": "bar",
+  "data": {
+    "labels": ["100", "1000", "10000"],
+    "datasets": [
       {
-        "algorithm": "Selection Sort",
-        "size": 100,
-        "comparisons": 4950,
-        "time_ms": 1.00
+        "label": "Selection Sort",
+        "data": [4950, 499500, 49995000],
+        "backgroundColor": "red"
       },
       {
-        "algorithm": "Merge Sort",
-        "size": 100,
-        "comparisons": 545,
-        "time_ms": 1.17
+        "label": "Merge Sort",
+        "data": [545, 8715, 120388],
+        "backgroundColor": "green"
       },
       {
-        "algorithm": "Quick Sort",
-        "size": 100,
-        "comparisons": 14,
-        "time_ms": 0.00
-      },
-      {
-        "algorithm": "Selection Sort",
-        "size": 1000,
-        "comparisons": 499500,
-        "time_ms": 178.94
-      },
-      {
-        "algorithm": "Merge Sort",
-        "size": 1000,
-        "comparisons": 8715,
-        "time_ms": 13.28
-      },
-      {
-        "algorithm": "Quick Sort",
-        "size": 1000,
-        "comparisons": 537,
-        "time_ms": 1.00
-      },
-      {
-        "algorithm": "Selection Sort",
-        "size": 10000,
-        "comparisons": 49995000,
-        "time_ms": 20121.72
-      },
-      {
-        "algorithm": "Merge Sort",
-        "size": 10000,
-        "comparisons": 120388,
-        "time_ms": 103.72
-      },
-      {
-        "algorithm": "Quick Sort",
-        "size": 10000,
-        "comparisons": 4210,
-        "time_ms": 3.28
+        "label": "Quick Sort",
+        "data": [14, 537, 4210],
+        "backgroundColor": "blue"
       }
     ]
+  },
+  "options": {
+    "title": {
+      "display": true,
+      "text": "Number of Comparisons by Algorithm and Size"
+    },
+    "scales": {
+      "yAxes": [
+        {
+          "type": "logarithmic",
+          "ticks": {
+            "beginAtZero": true
+          }
+        }
+      ]
+    }
   }
 }
